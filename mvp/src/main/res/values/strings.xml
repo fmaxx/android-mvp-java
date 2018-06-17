@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AtTheGate Notification</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings related to login -->
+    <string name="next_default">Loge in (please migrate to phone accounts)</string>
+    <string name="sign_in_with_email">Email (only for existing accounts)</string>
+
+    <string name="default_empty_list_message_text">Empty list.</string>
+    <!-- Other -->
+</resources>
