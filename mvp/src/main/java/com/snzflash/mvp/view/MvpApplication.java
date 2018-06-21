@@ -1,6 +1,24 @@
 package com.snzflash.mvp.view;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
-public class MvpApplication extends Application {
+import com.snzflash.di.components.AppComponent;
+
+public class MvpApplication extends MultiDexApplication {
+
+    protected AppComponent appComponent;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        inject();
+    }
+
+    protected void inject() {
+
+    }
+
+    public AppComponent getAppComponent() {
+        return appComponent;
+    }
 }
