@@ -92,6 +92,7 @@ public class ListFragment<M> extends MvpFragment implements IListView<M> {
 
     @Override
     void beforeDestroy() {
+        recyclerView.setAdapter(null);
         setProgressBarVisible(false);
     }
 
