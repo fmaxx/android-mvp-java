@@ -31,8 +31,26 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
+    def androidSupportVersion = "27.1.0"
+    api "com.android.support:customtabs:$androidSupportVersion"
+    api "com.android.support:recyclerview-v7:$androidSupportVersion"
+    api "com.android.support:support-v4:$androidSupportVersion"
+    api 'com.android.support.constraint:constraint-layout:1.1.2'
+
     // MultiDex
     implementation 'com.android.support:multidex:1.0.3'
+
+    // Dagger 2
+    def daggerVersion = "2.11"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

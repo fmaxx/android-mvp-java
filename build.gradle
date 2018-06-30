@@ -25,6 +25,18 @@ allprojects {
     }
 }
 
+// to avoid that error: https://stackoverflow.com/questions/44653261/android-dependency-has-different-version-for-the-compile-and-runtime
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex') ) {
+                details.useVersion "27.1.0"
+            }
+        }
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

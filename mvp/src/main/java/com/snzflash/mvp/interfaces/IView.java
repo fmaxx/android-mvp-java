@@ -6,7 +6,7 @@ import com.snzflash.mvp.view.MvpApplication;
 
 public interface IView {
 
-    MvpApplication getApplication();
+    MvpApplication getMvpApplication();
     void showMessage(String message);
     void showMessage(int resourceId);
 }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
+import com.snzflash.di.components.AppComponent;
 import com.snzflash.mvp.interfaces.IView;
 
 abstract class MvpFragment extends Fragment implements IView {
@@ -12,7 +13,7 @@ abstract class MvpFragment extends Fragment implements IView {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // injectDependencies(getApplication().getAppComponent());
+        injectDependencies(getMvpApplication().getAppComponent());
     }
 
     @Override
@@ -22,7 +23,7 @@ abstract class MvpFragment extends Fragment implements IView {
     }
 
     @Override
-    public MvpApplication getApplication() {
+    public MvpApplication getMvpApplication() {
         return null;
     }
 
@@ -38,7 +39,7 @@ abstract class MvpFragment extends Fragment implements IView {
         showMessage(message);
     }
 
-//     abstract void injectDependencies(AppComponent appComponent);
+    abstract void injectDependencies(AppComponent appComponent);
 
     abstract void beforeDestroy();
 }

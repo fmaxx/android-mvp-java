@@ -17,14 +17,13 @@ import com.snzflash.mvp.R;
 import com.snzflash.mvp.R2;
 import com.snzflash.mvp.interfaces.IListView;
 
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 
-public class ListFragment<M> extends MvpFragment implements IListView<M> {
+abstract public class ListFragment<M> extends MvpFragment implements IListView<M> {
 
     @BindView(R2.id.emptyMessageTextView)
     TextView emptyMessageTextView;
