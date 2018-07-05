@@ -30,14 +30,6 @@ abstract public class MvpActivity extends AppCompatActivity implements IView {
         showMessage(message);
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        injectDependencies(getMvpApplication().getAppComponent());
-        ButterKnife.bind(this);
-        initViews();
-    }
-
     abstract protected void initViews();
 
     @Override
