@@ -8,7 +8,7 @@ import android.widget.Toast;
 import com.snzflash.di.components.AppComponent;
 import com.snzflash.mvp.interfaces.IView;
 
-abstract class MvpFragment extends Fragment implements IView {
+abstract public class MvpFragment extends Fragment implements IView {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

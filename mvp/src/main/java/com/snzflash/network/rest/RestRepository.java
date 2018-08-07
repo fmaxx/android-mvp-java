@@ -18,6 +18,6 @@ public class RestRepository extends RxRepositoryBase implements IRestRepository 
             return Single.error(new Error("Service"));
         }
 
-        return service.loadData().compose(applySingleSchedulers());
+        return addRetryWhen(service.loadData());
     }
 }
